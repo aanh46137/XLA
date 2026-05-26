@@ -29,6 +29,8 @@ img_bright = np.clip(img.astype(int) + c, 0, 255).astype(np.uint8)
 #         if img_bright[x][y] <= 0:
 #             img_bright[x][y] = 0
 
+
+#Câu 3: Phép đóng và mở
 # Tạo phần tử cấu trúc B (Ma trận vuông toàn số 1)
 kernel = np.ones((5, 5), np.uint8)
 
@@ -38,7 +40,7 @@ kernel = np.ones((5, 5), np.uint8)
 #                    [0, 1, 0, 1, 0],
 #                    [1, 0, 0, 0, 1]], dtype=np.uint8)
 
-#Câu 3: Phép đóng và mở
+
 # Áp dụng phép Mở
 opening = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)
 
